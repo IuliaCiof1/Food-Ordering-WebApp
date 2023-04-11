@@ -5,7 +5,21 @@
       <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Server=DESKTOP-D12MC23\SQLEXPRESS;Initial Catalog=FoodOrderingWebApp_Db;TrustServerCertificate=True</jdbc-url>
+      <jdbc-url>Server=DESKTOP-D12MC23\SQLEXPRESS,65376;Initial Catalog=FoodOrderingWebApp_Db;TrustServerCertificate=True</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ayu-database@studywithme.database.windows.net" uuid="cc77896b-8e87-46a3-90e0-3c8bc3591376">
+      <driver-ref>sqlserver.jb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
+      <jdbc-url>Server=studywithme.database.windows.net,1433;Database=ayu-database</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ayu-database@studywithme.database.windows.net [2]" uuid="a45d92f3-e837-49b7-8bb2-57eac514cb50">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://studywithme.database.windows.net:1433;database=ayu-database;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

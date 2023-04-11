@@ -14,6 +14,36 @@ public class AppDbInitializer
 
             context.Database.EnsureCreated();
 
+            if (!context.ItemTypes.Any())
+            {
+                context.ItemTypes.AddRange(new List<ItemType>()
+                {
+                    new ItemType()
+                    {
+                        ImageURL = "https://i.imgur.com/dxoPhw5.jpeg",
+                        Name = "Burgers",
+                        //Id = 1
+                        //Items = new List<Item>()
+                    }
+                });
+
+                context.SaveChanges();
+            }
+            
+            if (!context.Restaurants.Any()) 
+            {
+                context.Restaurants.AddRange(new List<Restaurant>()
+                {
+                    new Restaurant()
+                    {
+                        LogoURL = "https://i.imgur.com/bQInPc5.png",
+                        Name = "BurgerKing"
+                    }
+                });
+                
+                context.SaveChanges();
+            }
+            
             if (!context.Items.Any()) //if there are not any items in the db
             {
                 context.Items.AddRange(new List<Item>()
@@ -50,35 +80,8 @@ public class AppDbInitializer
                 
                 context.SaveChanges();
             }
-
-
-            if (!context.Restaurants.Any()) 
-            {
-                context.Restaurants.AddRange(new List<Restaurant>()
-                {
-                    new Restaurant()
-                    {
-                        LogoURL = "https://i.imgur.com/bQInPc5.png",
-                        Name = "BurgerKing"
-                    }
-                });
-                
-                context.SaveChanges();
-            }
             
-            if (!context.ItemTypes.Any())
-            {
-                context.ItemTypes.AddRange(new List<ItemType>()
-                {
-                    new ItemType()
-                    {
-                        ImageURL = "https://i.imgur.com/dxoPhw5.jpeg",
-                        Name = "Burgers"
-                    }
-                });
-
-                context.SaveChanges();
-            }
+            
             
             if (!context.Offer_Restaurants.Any()) 
             {
